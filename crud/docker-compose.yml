@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'users_crud'
+      MYSQL_USER: 'admin'
+      MYSQL_PASSWORD: 'admin'
+      MYSQL_ROOT_PASSWORD: 'admin@123'
+    ports:
+      - '3306:3306'  # Expose MySQL port
+
+  # web:
+  #   build: .
+  #   container_name: flask_app
+  #   restart: always
+  #   ports:
+  #     - '5000:5000'  # Expose Flask app port
+  #   depends_on:
+  #     - db
+  #   environment:
+  #     DB_HOST: db
+  #     DB_USER: 'your_username'
+  #     DB_PASSWORD: 'your_password'
+  #     DB_NAME: 'your_db_name'

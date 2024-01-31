@@ -1,0 +1,6 @@
+Flask==2.0.2
+pymysql==1.1.0
+jsonify==0.5
+requests==2.31.0
+Werkzeug==2.2.2
+cryptography==41.0.5
